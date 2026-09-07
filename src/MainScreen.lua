@@ -1,7 +1,7 @@
 MainScreen = Class({})
 
-require("Header")
-require("Collection")
+require("src.Header")
+require("src.Collection")
 
 function MainScreen:load()
 	self.x = 0
@@ -10,13 +10,13 @@ function MainScreen:load()
 	self.height = WINDOW_HEIGHT
 
 	Header:load()
-	Collection:load({ width = self.width })
+	Collection:load({ width = self.width, height = self.height })
 end
 
 function MainScreen:render()
 	love.graphics.clear(0, 0, 0, 0)
 
-	MainScreen:debug()
+	self:debug()
 
 	Header:render()
 

@@ -1,5 +1,5 @@
 Class = require("libs.class")
-require("MainScreen")
+require("src.MainScreen")
 
 WINDOW_WIDTH = 1920
 WINDOW_HEIGHT = 1080
