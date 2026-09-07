@@ -13,8 +13,12 @@ function MainScreen:load()
 	Collection:load({ width = self.width, height = self.height })
 end
 
+function MainScreen:update(dt)
+	Collection:update(dt)
+end
+
 function MainScreen:render()
-	love.graphics.clear(0, 0, 0, 0)
+	love.graphics.setBackgroundColor(0, 0.5, 0.5, 1)
 
 	self:debug()
 
